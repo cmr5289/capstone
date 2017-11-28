@@ -1,0 +1,41 @@
+{% extends "capstone/capstone_base.html" %}
+
+{% block title %} Inventory List {% endblock %}
+
+{% block content %}
+    <h1>Inventory List</h1>
+
+    <div class="row">
+        <div class="col-3">
+            <button id="bookToggle">Hide Books</button>
+            <button id="dvdToggle">Hide DVDs</button>
+        </div>
+        <div class="col-3">
+        </div>
+    </div>
+
+    {% for item in inventory_items%}
+
+        {% if item.inventory_type|lower == "book" %}
+            <div class="inventory_list book_item">
+                <h2>{{item.details.title}}</h2>
+                <p><strong>Author: </strong> {{item.details.author}}</p>
+                <p><strong>Series: </strong> {{item.details.series}}</p>
+                <p><strong>Price: </strong> ${{item.price}}</p>
+                <p><a href="{% url "inventory_details" pk=item.pk %}">MORE INFO</a></p>
+            </div>
+        {% elif item.inventory_type|lower == "dvd" %}
+            <div class="inventory_list dvd_item">
+                <h2>{{item.details.title}}</h2>
+                <p><strong>Actors: </strong> {{item.details.actors}}</p>
+                <p><strong>Raiting: </strong> {{item.details.raiting}}</p>
+                <p><strong>Price: </strong> ${{item.price}}</p>
+                <p><a href="{% url "inventory_details" pk=item.pk %}">MORE INFO</a></p>
+            </div>
+        {% else %}
+            <p>SOMETHING WRONG</p>
+        {% endif %}
+
+    {% endfor %}
+    
+{% endblock %}

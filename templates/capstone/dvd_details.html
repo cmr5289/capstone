@@ -1,0 +1,18 @@
+{% extends "capstone/capstone_base.html" %}
+
+{% block title %} {{inventory_item.details.title}} Details {% endblock %}
+
+{% block content %}
+    <h1>{{inventory_item.details.title}}, Details</h1>
+
+    <div class="inventory_list">
+        <h2>{{inventory_item.details.title}}</h2>
+        <p><strong>Actors: </strong> {{inventory_item.details.actors}}</p>
+        <p><strong>Raiting: </strong> {{inventory_item.details.raiting}}</p>
+        <p><strong>Run Time: </strong> {{inventory_item.details.run_time}}</p>
+        <p><strong>Release Date: </strong> {{inventory_item.details.release_date}}</p>
+        <p><strong>Description: </strong> {{inventory_item.details.description}}</p>
+        <p><strong>Price: </strong> ${{inventory_item.price}}</p>
+    </div>
+    
+{% endblock %}

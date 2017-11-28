@@ -1,0 +1,12 @@
+
+.inventory_list{
+    margin: 1em 1em 2em 1em;
+}
+
+.inventory_list p{
+    margin: 0 0 0 3em;
+}
+
+.inventory_list h2{
+    margin-bottom: 0;
+}
