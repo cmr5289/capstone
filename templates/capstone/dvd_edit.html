@@ -1,0 +1,14 @@
+{% extends "capstone/capstone_base.html" %}
+
+{% block title %} DVD Edit/Create {% endblock %}
+
+{% block content %}
+    <h1>DVD Edit / Create</h1>
+
+    <form method="POST" class="tuna-form">
+        {% csrf_token %}
+        {{ form }}
+        <button type="submit" class="form-controls-submit button-link save-btn"> Save </button>
+    </form>
+    
+{% endblock %}

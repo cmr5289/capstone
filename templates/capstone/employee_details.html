@@ -1,0 +1,17 @@
+{% extends "capstone/capstone_base.html" %}
+
+{% block title %} {{employee.name}} Edit {% endblock %}
+
+{% block content %}
+    <h1>{{employee.name}}</h1>
+
+        <div class="employee_list">
+            <p><strong>Employee Number: </strong>{{employee.employee_number}}</p>
+            <p><strong>Phone Number: </strong>{{employee.phone_number}}</p>
+            <p><strong>Role: </strong>{{employee.role}}</p>
+            <p><strong>Email: </strong>{{employee.email}}</p>
+            <p><strong>Department: </strong>{{employee.department}}</p>
+            <p><a href="{% url "employee_edit" pk=employee.pk %}">Edit</a></p>
+        </div>
+    
+{% endblock %}

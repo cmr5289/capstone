@@ -5,6 +5,15 @@
     <link rel="stylesheet" href="{% static 'css/capstone.css' %}">
 {% endblock %}
 
+{% block header %}
+    <div class="header-left">
+        <p>Ardently Books</p>
+    </div>
+    <div class="header-right">
+        <p><a href="{% url "capstone_home" %}">Home</a> | <a href="{% url "inventory" %}">Inventory</a> | <a href="{% url "employees" %}">Employees</a></p>
+    </div>
+{% endblock %}
+
 {% block content %}{% endblock %}
 
 {% block foot %}

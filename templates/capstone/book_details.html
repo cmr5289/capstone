@@ -6,7 +6,6 @@
     <h1>{{inventory_item.details.title}}, Details</h1>
 
     <div class="inventory_list">
-        <h2>{{inventory_item.details.title}}</h2>
         <p><strong>Author: </strong> {{inventory_item.details.author}}</p>
         <p><strong>Publisher: </strong> {{inventory_item.details.publisher}}</p>
         <p><strong>Copyright Date: </strong> {{inventory_item.details.copyright_date}}</p>
@@ -16,6 +15,7 @@
         <p><strong>Publication Date: </strong> {{inventory_item.details.publication_date}}</p>
         <p><strong>Description: </strong> {{inventory_item.details.description}}</p>
         <p><strong>Price: </strong> ${{inventory_item.price}}</p>
+        <p><a href="{% url "inventory_edit" pk=inventory_item.inventory_id %}">Edit</a></p>
     </div>
     
 {% endblock %}

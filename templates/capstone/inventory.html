@@ -6,11 +6,20 @@
     <h1>Inventory List</h1>
 
     <div class="row">
-        <div class="col-3">
+        <div class="col-4">
             <button id="bookToggle">Hide Books</button>
+        </div>
+        <div class="col-4">
             <button id="dvdToggle">Hide DVDs</button>
         </div>
-        <div class="col-3">
+    </div>
+
+    <div class="row">
+        <div class="col-4">
+            <a href="{% url "book_new"%}"><button>New Book</button></a>
+        </div>
+        <div class="col-4">
+            <a href="{% url "dvd_new"%}"><button>New DVD</button></a>
         </div>
     </div>
 

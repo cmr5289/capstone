@@ -1,12 +1,18 @@
+.inventory_list, .employee_list {
+  margin: 1em 1em 2em 1em; }
+  .inventory_list p, .employee_list p {
+    margin: 0 0 0 3em; }
+  .inventory_list h2, .employee_list h2 {
+    margin-bottom: 0; }
 
-.inventory_list{
-    margin: 1em 1em 2em 1em;
-}
+.header-left {
+  text-align: left;
+  width: 50%;
+  float: left; }
 
-.inventory_list p{
-    margin: 0 0 0 3em;
-}
+.header-right {
+  text-align: right;
+  width: 50%;
+  float: right; }
 
-.inventory_list h2{
-    margin-bottom: 0;
-}
+/*# sourceMappingURL=capstone.css.map */

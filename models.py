@@ -13,13 +13,14 @@ class PersonEntry(models.Model):
         blank=False,
         null=False)
     # Employee Number
-    employee_number = models.IntegerField(
+    employee_number = models.CharField(
         verbose_name="Employee Number",
+        max_length=9,
         blank=False,
         null=False)
     # Phone Number
     phone_number = models.CharField(
-        max_length=20,
+        max_length=14,
         verbose_name="Phone Number",
         blank=True,
         null=True)
@@ -39,6 +40,8 @@ class PersonEntry(models.Model):
         max_length=255,
         blank=True,
         null=True)
+    # Active
+    active = models.BooleanField()
 
     def get_first_name(self):
         return self.name.split(" ")[0]
